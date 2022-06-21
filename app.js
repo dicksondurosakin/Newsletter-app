@@ -2,7 +2,7 @@ const express = require('express')
 const port = process.env.port || 3000
 const bodyParser = require('body-parser')
 const https = require('https')
-const { request } = require('http')
+// const { request } = require('http')
 const app = express()
 app.use(bodyParser.urlencoded({'extended':true}))
 app.use(express.static('public'))
@@ -10,6 +10,7 @@ app.use(express.static('public'))
 
 // route starts here
 app.get('/', (req,res)=>{
+    // console.log(process.env)
     res.sendFile(__dirname + '/signup.html')
 })
 
@@ -26,11 +27,11 @@ app.post('/',function(req,res){
     }
     var jsonData = JSON.stringify(data)
 
-    var url = 'https://us9.api.mailchimp.com/3.0/lists/250108def4'
+    var url = `https://us9.api.mailchimp.com/3.0/lists/${process.env.LISTID}`
 
     var options = {
         method:'post',
-        auth:'dickson:691cc59e80c949e95efa90c9a8c05968-us9'
+        auth:`dickson:${process.env.MAILCHIMPKEY}`
     }
 
     var request = https.request(url,options,function(response){
