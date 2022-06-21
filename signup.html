@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Signin Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <form method="post">
+    <img class="mb-4" src="data:image/jpeg;base64,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" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Signup to My Newsletter</h1>
+    
+    <div class="form-floating">
+        <input type="text" class="form-control top" name="first_name" id="first_name" placeholder="First Name">
+        <label for="first_name">First Name</label>
+    </div>
+
+    <div class="form-floating">
+        <input type="text" class="form-control middle" name="last_name" id="last_name" placeholder="Last Name">
+        <label for="last_name">Last Name</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="email" class="form-control bottom" name="email" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign me up!</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Dickson</p>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
