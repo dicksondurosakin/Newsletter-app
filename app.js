@@ -1,5 +1,5 @@
 const express = require('express')
-const port = 3000
+const port = process.env.port || 3000
 const bodyParser = require('body-parser')
 const https = require('https')
 const { request } = require('http')
@@ -57,8 +57,3 @@ app.listen(port, ()=>{
     console.log('project running on port '+ port)
 })
 
-// api key 
-// 691cc59e80c949e95efa90c9a8c05968-us9
-
-// list id
-// 250108def4
